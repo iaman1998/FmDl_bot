@@ -31,7 +31,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["ffmpegrobot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["ffmpegrobot"]))
 def ffmpegrobot_ad(bot, update):
     TRChatBase(update.from_user.id, update.text, "ffmpegrobot")
     bot.send_message(
@@ -42,7 +42,7 @@ def ffmpegrobot_ad(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["trim"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["trim"]))
 def trim(bot, update):
     TRChatBase(update.from_user.id, update.text, "trim")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
@@ -152,7 +152,7 @@ def trim(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["storageinfo"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["storageinfo"]))
 def storage_info(bot, update):
     TRChatBase(update.from_user.id, update.text, "storageinfo")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
@@ -182,7 +182,7 @@ def storage_info(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["clearffmpegmedia"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["clearffmpegmedia"]))
 def clear_media(bot, update):
     TRChatBase(update.from_user.id, update.text, "clearffmpegmedia")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
@@ -202,7 +202,7 @@ def clear_media(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["downloadmedia"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["downloadmedia"]))
 def download_media(bot, update):
     TRChatBase(update.from_user.id, update.text, "downloadmedia")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:

@@ -30,7 +30,7 @@ def GetExpiryDate(chat_id):
     return expires_at
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["help", "about"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["help", "about"]))
 def help_user(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/help")
@@ -42,7 +42,7 @@ def help_user(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["me"]))
 def get_me_info(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/me")
@@ -56,7 +56,7 @@ def get_me_info(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 def start(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/start")
@@ -67,7 +67,7 @@ def start(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["upgrade"]))
 def upgrade(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/upgrade")
