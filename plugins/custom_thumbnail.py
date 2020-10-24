@@ -92,8 +92,7 @@ def save_photo(bot, update):
             chat_id=update.chat.id,
             text=Translation.ABUSIVE_USERS,
             reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
+            disable_web_page_preview=True
         )
         return
     if update.media_group_id is not None:
@@ -135,8 +134,7 @@ def delete_thumbnail(bot, update):
             chat_id=update.chat.id,
             text=Translation.ABUSIVE_USERS,
             reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
+            disable_web_page_preview=True
         )
         return
     download_location = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)

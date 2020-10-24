@@ -47,7 +47,6 @@ def button(bot, update):
             text=Translation.ABUSIVE_USERS,
             message_id=update.message.message_id,
             disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
         )
         return
     cb_data = update.data.decode("UTF-8")

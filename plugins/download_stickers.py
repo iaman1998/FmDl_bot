@@ -35,8 +35,7 @@ def DownloadStickersBot(bot, update):
             chat_id=update.message.chat.id,
             text=Translation.ABUSIVE_USERS,
             message_id=update.message.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
+            disable_web_page_preview=True
         )
         return
     logger.info(update.from_user)

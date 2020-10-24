@@ -37,7 +37,6 @@ def help_user(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_USER,
-        parse_mode=pyrogram.ParseMode.HTML,
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
@@ -52,7 +51,6 @@ def get_me_info(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
-        parse_mode=pyrogram.ParseMode.HTML,
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
@@ -76,7 +74,6 @@ def upgrade(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=Translation.UPGRADE_TEXT,
-        parse_mode=pyrogram.ParseMode.HTML,
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )

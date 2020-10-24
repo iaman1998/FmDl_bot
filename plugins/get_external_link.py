@@ -39,8 +39,7 @@ def get_link(bot, update):
             chat_id=update.chat.id,
             text=Translation.ABUSIVE_USERS,
             reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
+            disable_web_page_preview=True
         )
         return
     logger.info(update.from_user)
@@ -116,7 +115,6 @@ def get_link(bot, update):
         bot.edit_message_text(
             chat_id=update.chat.id,
             text=Translation.AFTER_GET_DL_LINK.format(adfulurl, max_days),
-            parse_mode=pyrogram.ParseMode.HTML,
             message_id=a.message_id,
             disable_web_page_preview=True
         )
